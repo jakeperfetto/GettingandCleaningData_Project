@@ -1,0 +1,131 @@
+---
+title: "CodeBook for Getting and Cleaning Data course on Coursera.com"
+author: "Jake Perfetto"
+date: "March 22, 2019"
+output: html_document
+---
+The output of the dataset as a txt file can be found in the repo as tidy_activity_means.txt. Read the README.md for more description on the project and where the data was gathered from.
+
+## Identifiers
+Subject = the ID of the test subject is an integer from 1 to 30
+Activity = the type of activity that was performed when the measurements were taken.
++ Walking: subject was walking
++ Walking Upstairs: subject was walking upstairs
++ Walking downstairs: subject was walking downstairs
++ Sitting: subject was sitting
++ Laying: subject was laying down
++ Standing: subject was standing in place
+
+## Measurements
+All the measurment names were un-abbreviated to full names that are easier to read
+and special symbols were removed. 
+
+The features or measurements are described as:
+
+The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals  were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
+
+Triaxial accelaeration (X, Y, Z) was recorded from the accelerometer (total acceleration) and the body acceleration was estimated from this. Acceleration measuremnts (variables containing Accelerometer) are in the units g's (9.81m.s-2), and gyroscope measurements (variables containg Gyroscope) are in the units radians per second (rad.s-1).
+
+The body acceleration (variables with body) signal was obtained by subtracting the gravity from the total acceleration. 
+
+The magnitude measurements (variables containing Magnitude) were calculated with the Euclidian Norm.
+
+The measurements are classfied by either:
+-Time-domain (variables with timeDomain)
+-Frequency-Domain (variables with FrequencyDomain)
+
+
+# List of all the Measurements 
+The meaning and type of measurement can be derived from the information above.
+ [3] "timeDomainBodyAccelerometerMeanX"                                   
+ [4] "timeDomainBodyAccelerometerMeanY"                                   
+ [5] "timeDomainBodyAccelerometerMeanZ"                                   
+ [6] "timeDomainBodyAccelerometerStandardDeviationX"                      
+ [7] "timeDomainBodyAccelerometerStandardDeviationY"                      
+ [8] "timeDomainBodyAccelerometerStandardDeviationZ"                      
+ [9] "timeDomainGravityAccelerometerMeanX"                                
+[10] "timeDomainGravityAccelerometerMeanY"                                
+[11] "timeDomainGravityAccelerometerMeanZ"                                
+[12] "timeDomainGravityAccelerometerStandardDeviationX"                   
+[13] "timeDomainGravityAccelerometerStandardDeviationY"                   
+[14] "timeDomainGravityAccelerometerStandardDeviationZ"                   
+[15] "timeDomainBodyAccelerometerJerkMeanX"                               
+[16] "timeDomainBodyAccelerometerJerkMeanY"                               
+[17] "timeDomainBodyAccelerometerJerkMeanZ"                               
+[18] "timeDomainBodyAccelerometerJerkStandardDeviationX"                  
+[19] "timeDomainBodyAccelerometerJerkStandardDeviationY"                  
+[20] "timeDomainBodyAccelerometerJerkStandardDeviationZ"                  
+[21] "timeDomainBodyGyroscopeMeanX"                                       
+[22] "timeDomainBodyGyroscopeMeanY"                                       
+[23] "timeDomainBodyGyroscopeMeanZ"                                       
+[24] "timeDomainBodyGyroscopeStandardDeviationX"                          
+[25] "timeDomainBodyGyroscopeStandardDeviationY"                          
+[26] "timeDomainBodyGyroscopeStandardDeviationZ"                          
+[27] "timeDomainBodyGyroscopeJerkMeanX"                                   
+[28] "timeDomainBodyGyroscopeJerkMeanY"                                   
+[29] "timeDomainBodyGyroscopeJerkMeanZ"                                   
+[30] "timeDomainBodyGyroscopeJerkStandardDeviationX"                      
+[31] "timeDomainBodyGyroscopeJerkStandardDeviationY"                      
+[32] "timeDomainBodyGyroscopeJerkStandardDeviationZ"                      
+[33] "timeDomainBodyAccelerometerMagnitudeMean"                           
+[34] "timeDomainBodyAccelerometerMagnitudeStandardDeviation"              
+[35] "timeDomainGravityAccelerometerMagnitudeMean"                        
+[36] "timeDomainGravityAccelerometerMagnitudeStandardDeviation"           
+[37] "timeDomainBodyAccelerometerJerkMagnitudeMean"                       
+[38] "timeDomainBodyAccelerometerJerkMagnitudeStandardDeviation"          
+[39] "timeDomainBodyGyroscopeMagnitudeMean"                               
+[40] "timeDomainBodyGyroscopeMagnitudeStandardDeviation"                  
+[41] "timeDomainBodyGyroscopeJerkMagnitudeMean"                           
+[42] "timeDomainBodyGyroscopeJerkMagnitudeStandardDeviation"              
+[43] "FrequencyuencyDomainBodyAccelerometerMeanX"                         
+[44] "FrequencyuencyDomainBodyAccelerometerMeanY"                         
+[45] "FrequencyuencyDomainBodyAccelerometerMeanZ"                         
+[46] "FrequencyuencyDomainBodyAccelerometerStandardDeviationX"            
+[47] "FrequencyuencyDomainBodyAccelerometerStandardDeviationY"            
+[48] "FrequencyuencyDomainBodyAccelerometerStandardDeviationZ"            
+[49] "FrequencyuencyDomainBodyAccelerometerMeanFrequencyX"                
+[50] "FrequencyuencyDomainBodyAccelerometerMeanFrequencyY"                
+[51] "FrequencyuencyDomainBodyAccelerometerMeanFrequencyZ"                
+[52] "FrequencyuencyDomainBodyAccelerometerJerkMeanX"                     
+[53] "FrequencyuencyDomainBodyAccelerometerJerkMeanY"                     
+[54] "FrequencyuencyDomainBodyAccelerometerJerkMeanZ"                     
+[55] "FrequencyuencyDomainBodyAccelerometerJerkStandardDeviationX"        
+[56] "FrequencyuencyDomainBodyAccelerometerJerkStandardDeviationY"        
+[57] "FrequencyuencyDomainBodyAccelerometerJerkStandardDeviationZ"        
+[58] "FrequencyuencyDomainBodyAccelerometerJerkMeanFrequencyX"            
+[59] "FrequencyuencyDomainBodyAccelerometerJerkMeanFrequencyY"            
+[60] "FrequencyuencyDomainBodyAccelerometerJerkMeanFrequencyZ"            
+[61] "FrequencyuencyDomainBodyGyroscopeMeanX"                             
+[62] "FrequencyuencyDomainBodyGyroscopeMeanY"                             
+[63] "FrequencyuencyDomainBodyGyroscopeMeanZ"                             
+[64] "FrequencyuencyDomainBodyGyroscopeStandardDeviationX"                
+[65] "FrequencyuencyDomainBodyGyroscopeStandardDeviationY"                
+[66] "FrequencyuencyDomainBodyGyroscopeStandardDeviationZ"                
+[67] "FrequencyuencyDomainBodyGyroscopeMeanFrequencyX"                    
+[68] "FrequencyuencyDomainBodyGyroscopeMeanFrequencyY"                    
+[69] "FrequencyuencyDomainBodyGyroscopeMeanFrequencyZ"                    
+[70] "FrequencyuencyDomainBodyAccelerometerMagnitudeMean"                 
+[71] "FrequencyuencyDomainBodyAccelerometerMagnitudeStandardDeviation"    
+[72] "FrequencyuencyDomainBodyAccelerometerMagnitudeMeanFrequency"        
+[73] "FrequencyuencyDomainBodyAccelerometerJerkMagnitudeMean"             
+[74] "FrequencyuencyDomainBodyAccelerometerJerkMagnitudeStandardDeviation"
+[75] "FrequencyuencyDomainBodyAccelerometerJerkMagnitudeMeanFrequency"    
+[76] "FrequencyuencyDomainBodyGyroscopeMagnitudeMean"                     
+[77] "FrequencyuencyDomainBodyGyroscopeMagnitudeStandardDeviation"        
+[78] "FrequencyuencyDomainBodyGyroscopeMagnitudeMeanFrequency"            
+[79] "FrequencyuencyDomainBodyGyroscopeJerkMagnitudeMean"                 
+[80] "FrequencyuencyDomainBodyGyroscopeJerkMagnitudeStandardDeviation"    
+[81] "FrequencyuencyDomainBodyGyroscopeJerkMagnitudeMeanFrequency"  
+
+## Transformations
+The data in a zip file can be downloaded at the link: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+
+These were the transformations made to the sourced data in accordance with the project instructions which can be found in the README.md file.
+
+- Training and test data sets were merged
+- All the measurements of mean and standard deviation were extracted by looking for any column names (variables) with mean or std included
+- Instead of activity as a number 1-6, it was changed to the type of activity conducted (e.g. walking)
+- the variable names were cleaned by removing the original f or t at the beginning and changing it to FrequencyDomain or timeDomain. Then, abbreviations like gyro and Accel were changed to the full word (gyroscope and accelerometer). Also, mean and std were changed to Mean and StandardDeviation. When there was BodyBody, it was changed to just Body. 
+- The data was then grouped by subject and activity, and the average of each variable was taken. 
+
+All these transformations are a part of the run_analysis.R script which is explained in more detail in the README.md file. 
